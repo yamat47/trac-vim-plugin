@@ -14,6 +14,11 @@ Add this code to your `.vimrc` or `init.vim`.
 call dein#add('yamat47/trac-vim-plugin')
 ```
 
+Usage
+----
+
+To use automatic filetype detection, you should change your Trac wiki document's extension to `*.trac` or `*.tracwiki`.
+
 Future works
 ----
 
