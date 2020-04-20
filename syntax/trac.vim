@@ -30,18 +30,18 @@ syn region tracBlockquote start="^\s*>" end="$" contains=tracListItem,@tracInlin
 syn region tracCodeBlock matchGroup=tracCodeBlockIdentifier start="^\s*{{{\(#!\a\+\)\?\s*$" end="^\s*}}}\s*$"
 syn region tracComment start="^\s*{{{#!comment\s*$" end="^\s*}}}\s*$" contains=tracUrl
 
-syn region tracItalic     matchGroup=tracTextIdentifier start="'\{2}"       end="'\{2}"       contains=tracEscape oneline
-syn region tracItalic     matchGroup=tracTextIdentifier start="/\{2}"       end="/\{2}"       contains=tracEscape oneline
-syn region tracBold       matchGroup=tracTextIdentifier start="'\{3}"       end="'\{3}"       contains=tracEscape oneline
-syn region tracBold       matchGroup=tracTextIdentifier start="\*\{2}"      end="\*\{2}"      contains=tracEscape oneline
-syn region tracBoldItalic matchGroup=tracTextIdentifier start="'\{5}"       end="'\{5}"       contains=tracEscape oneline
-syn region tracBoldItalic matchGroup=tracTextIdentifier start="\*\{2}'\{2}" end="\*\{2}'\{2}" contains=tracEscape oneline
-syn region tracUnderline  matchGroup=tracTextIdentifier start="_\{2}"       end="_\{2}"       contains=tracEscape oneline
-syn region tracStrike     matchGroup=tracTextIdentifier start="\~\{2}"      end="\~\{2}"      contains=tracEscape oneline
-syn region tracSuper      matchGroup=tracTextIdentifier start="\^"          end="\^"          contains=tracEscape oneline
-syn region tracSub        matchGroup=tracTextIdentifier start=",\{2}"       end=",\{2}"       contains=tracEscape oneline
-syn region tracInlineCode matchGroup=tracTextIdentifier start="{\{3}"       end="}\{3}"       contains=tracEscape oneline
-syn region tracInlineCode matchGroup=tracTextIdentifier start="`"           end="`"           contains=tracEscape oneline
+syn region tracItalic     matchGroup=tracTextIdentifier start="'\{2}"       end="'\{2}"       oneline contains=tracEscape
+syn region tracItalic     matchGroup=tracTextIdentifier start="/\{2}"       end="/\{2}"       oneline contains=tracEscape
+syn region tracBold       matchGroup=tracTextIdentifier start="'\{3}"       end="'\{3}"       oneline contains=tracEscape
+syn region tracBold       matchGroup=tracTextIdentifier start="\*\{2}"      end="\*\{2}"      oneline contains=tracEscape
+syn region tracBoldItalic matchGroup=tracTextIdentifier start="'\{5}"       end="'\{5}"       oneline contains=tracEscape
+syn region tracBoldItalic matchGroup=tracTextIdentifier start="\*\{2}'\{2}" end="\*\{2}'\{2}" oneline contains=tracEscape
+syn region tracUnderline  matchGroup=tracTextIdentifier start="_\{2}"       end="_\{2}"       oneline contains=tracEscape
+syn region tracStrike     matchGroup=tracTextIdentifier start="\~\{2}"      end="\~\{2}"      oneline contains=tracEscape
+syn region tracSuper      matchGroup=tracTextIdentifier start="\^"          end="\^"          oneline contains=tracEscape
+syn region tracSub        matchGroup=tracTextIdentifier start=",\{2}"       end=",\{2}"       oneline contains=tracEscape
+syn region tracInlineCode matchGroup=tracTextIdentifier start="{\{3}"       end="}\{3}"       oneline
+syn region tracInlineCode matchGroup=tracTextIdentifier start="`"           end="`"           oneline
 
 syn region tracTableRow start="^\s*|\{2}" end="|\{2}\s*\\\?$" oneline contains=tracTableRowNotStartNewRowIdentifier,tracTableCellIdentifier
 syn match tracTableRowNotStartNewRowIdentifier "\\$" contained
